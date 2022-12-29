@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: dimgrey;
     color: antiquewhite;
@@ -448,11 +452,11 @@ nav ul li a:hover::after{
     color: #5eb4ff;
 }
 
-.contact-text p::before{
+
+.contact-text img{
     float: left;
-    content: url(img/Send.png);
-    padding-right: 10px;
-    transform: scale(1);
+    padding: 10px 5px;
+    margin-top: 15px;
 }
 
 .contact-left{
@@ -544,15 +548,17 @@ form .btn.submit{
 
 /*----------------CSS for small screen---------------*/
 
-.nav-icon{
+nav .fa-solid{
     display: none;
     width: 35px;
     height: 35px;
 }
 
 @media only screen and (max-width: 600px){
+
     #header{
         background-image: url(img/Wallpaper.jpg);
+        padding: 10px;
     }
 
     .header-text p{
@@ -564,24 +570,22 @@ form .btn.submit{
         font-size: 35px;
     }
 
-    .nav-icon{
+    nav .fa-solid{
         display: block;
-    }
-
-    .nav-icon.m{
-        margin-top: 25px;
-        margin-right: 25px;
+        margin-top: 35px;
+        font-size: 25px;
     }
 
     nav ul{
         background: #5eb4ff;
         position: fixed;
         top: 0;
-        right: -200px;
+        right: -250px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
+        transition: right 0.5s;
     }
 
     nav ul li{
@@ -589,11 +593,15 @@ form .btn.submit{
         margin: 25px;
     }
 
-    nav ul .nav-icon{
+    nav ul .fa-solid{
         position: absolute;
-        top: 25px;
+        top: 0;
         left: 25px;
         cursor: pointer;
+    }
+
+    #about{
+        padding: 10px;
     }
 
     .about-text{
@@ -603,4 +611,97 @@ form .btn.submit{
     .about-desc{
         font-size: 20px;
     }
+
+    .contact-text p{
+        margin-top: 35px;
+        margin-left: 60px;
+        font-size: 20px;
+    }
+
+    .contact-text img{
+        float: left;
+    }
+
+    .contact-text h1{
+        font-size: 40px;
+    }
+
+    .skills{
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+
+    .about-column-1, .about-column-2{
+        flex-basis: 100%;
+    }
+
+    .about-column-1{
+        margin-bottom: 30px;
+    }
+
+    .about-skills{
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    #skills ul li span{
+        font-size: 20px;
+    }
+
+    #skills ul li{
+        font-size: 18px;
+    }
+
+    .skills-content ul li span{
+        margin: 10px 0;
+    }
+
+    .Javascript{
+        margin-left: 10px;
+    }
+
+    .Java{
+        margin-top: 10px;
+        margin-left: 28px;
+    }
+
+    .Python{
+        margin-top: 10px;
+        margin-left: 9px;
+    }
+
+    #services{
+        padding: 10px;
+    }
+
+    .services-text{
+        font-size: 40px;
+    }
+
+    #portfolio{
+        padding: 10px;
+    }
+
+    .portfolio-text{
+        font-size: 40px;
+    }
+
+    #contact{
+        padding: 10px;
+    }
+
+    .contact-text{
+        font-size: 40px;
+    }
+
+    .btn.cv{
+        font-size: 17px;
+    }
+
+}
+
+#msg {
+    color: lightgreen;
+    margin-top: -40px;
+    display: block;
 }
